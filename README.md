@@ -51,6 +51,9 @@ O algoritmo pode ser utilizado em tarefas de **classificação** e **regressão*
 ## 🛠️ Tecnologias utilizadas
 
 O site foi desenvolvido utilizando tecnologias web básicas:
+
+<br> 
+
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,py,vscode)](https://skillicons.dev)
 
 
