@@ -155,7 +155,7 @@ diretamente no navegador.
 
 ## 🌐 Publicação
 
-O projeto pode ser publicado utilizando o **GitHub**, permitindo que o site seja acessado por meio de uma URL pública pelo Vercel.
+O projeto será publicado utilizando o **GitHub**, permitindo que o site seja acessado por meio de uma URL pública do Vercel.
 
 🔗 **[Acessar o site](COLE_AQUI_O_LINK_DA_VERCEL)**
 
