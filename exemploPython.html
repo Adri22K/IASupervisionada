@@ -1,0 +1,81 @@
+<section class="section code-section" id="codigo">
+      <div class="section-heading center reveal">
+        <span class="section-number">04</span>
+        <div>
+          <p class="eyebrow">AGORA VAMOS CODIFICAR</p>
+          <h2>Um modelo em <span>Python.</span></h2>
+          <p class="section-intro">Exemplo curto de uma árvore de decisão aplicada ao nosso projeto de qualidade do ar.</p>
+        </div>
+      </div>
+
+      <div class="code-layout">
+        <div class="code-window reveal">
+          <div class="code-bar">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>modelo.py</span>
+            <span class="lang">PYTHON</span>
+          </div>
+          <pre><code><span class="kw">from</span> sklearn.tree <span class="kw">import</span> DecisionTreeClassifier
+
+<span class="comment"># Dados de treinamento: [PM2.5, PM10] em µg/m³</span>
+<span class="comment"># Valores simplificados apenas para demonstrar a IA supervisionada</span>
+X = [
+    [10, 20],
+    [15, 30],
+    [45, 70],
+    [60, 90]
+]
+
+<span class="comment"># Respostas conhecidas</span>
+<span class="comment"># 0 = qualidade do ar adequada | 1 = qualidade do ar inadequada</span>
+y = [<span class="num">0</span>, <span class="num">0</span>, <span class="num">1</span>, <span class="num">1</span>]
+
+<span class="comment"># Criando o modelo</span>
+modelo = DecisionTreeClassifier(
+    random_state=<span class="num">42</span>
+)
+
+<span class="comment"># Treinando o modelo com exemplos já classificados</span>
+modelo.fit(X, y)
+
+<span class="comment"># Novo horário: PM2.5 = 35 e PM10 = 55 µg/m³</span>
+previsao = modelo.predict([[35, 55]])
+
+<span class="func">print</span>(previsao)</code></pre>
+        </div>
+
+        <aside class="code-explanation reveal delay-1">
+          <span class="card-kicker">O QUE ACONTECEU?</span>
+          <div class="explain-item"><b>01</b><p><strong>X</strong> contém as características dos exemplos.</p></div>
+          <div class="explain-item"><b>02</b><p><strong>y</strong> contém os rótulos conhecidos.</p></div>
+          <div class="explain-item"><b>03</b><p><strong>fit()</strong> treina o modelo com os exemplos.</p></div>
+          <div class="explain-item"><b>04</b><p><strong>predict()</strong> produz uma previsão para um novo dado.</p></div>
+          <a class="notebook-link" href="https://colab.research.google.com/drive/1iaTblaa6fS-YgcfmiHlj9UdTOWfMXJwI#scrollTo=t0sG5lasXjdA" target="_blank">↗ Abrir notebook completo</a>
+          <small>Acesse aqui o código na integra pelo Google Colab.</small>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section demo-section">
+      <div class="demo-card reveal">
+        <div class="demo-copy">
+          <p class="eyebrow">MINI EXPERIMENTO</p>
+          <h2>Você consegue prever?</h2>
+          <p>Ajuste os valores de <strong>PM2.5</strong> e <strong>PM10</strong> para simular um novo horário. A demonstração usa uma regra didática simplificada baseada nos exemplos de treinamento acima.</p>
+        </div>
+
+        <div class="demo-controls">
+          <label>PM2.5 <output id="ageOutput">35 µg/m³</output>
+            <input type="range" id="age" min="5" max="100" step="5" value="35">
+          </label>
+          <label>PM10 <output id="incomeOutput">55 µg/m³</output>
+            <input type="range" id="income" min="10" max="150" step="5" value="55">
+          </label>
+          <button class="btn btn-primary" id="predictBtn">Fazer previsão →</button>
+          <div class="prediction" id="prediction" aria-live="polite">
+            <span>?</span>
+            <div><small>RESULTADO</small><strong>Aguardando dados...</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
