@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+ENV/
+
+# Variáveis de ambiente e arquivos locais
+.env
+.env.*
+
+# Jupyter / Google Colab
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+
+# Arquivos gerados por ferramentas
+dist/
+build/
+*.egg-info/
+
+# Arquivos de cache
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# Resultados locais / arquivos gerados
+*.bak
+*.swp
