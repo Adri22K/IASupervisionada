@@ -157,7 +157,7 @@ diretamente no navegador.
 
 O projeto será publicado utilizando o **GitHub**, permitindo que o site seja acessado por meio de uma URL pública do Vercel.
 
-🔗 **[Acessar o site](COLE_AQUI_O_LINK_DA_VERCEL)**
+🔗 **[Acessar o site](https://iasupervisionada.vercel.app/#inicio)**
 
 O código-fonte do projeto está disponível no GitHub:
 
